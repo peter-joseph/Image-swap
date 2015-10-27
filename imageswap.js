@@ -1,6 +1,6 @@
 var background_images = ['image1.png','image2.png','image3.png','image4.png']; //An Array containing all the images to be rotated
 var declared_element = 'body'; //The HTML element that the background-images will be assigned too
-var image_location = 'images'; //The folder that includes the background-images
+var image_location = 'images/'; //The folder that includes the background-images
 	
 // Calculates the number of images to distribute across the month
 var image_count = background_images.length;
@@ -44,5 +44,5 @@ for (i=0; i<= image_count; i++) {
 
 // Stores the image in a CSS <style> at the bottom of <body>
 var style = document.createElement('style')
-	style.innerHTML = declared_element + " {" + "background-image: url(" + image_location + "/" + selected_image + ");}";
+	style.innerHTML = declared_element + " {" + "background-image: url(" + image_location + selected_image + ");}";
 document.body.appendChild(style);
